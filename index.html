@@ -6,80 +6,54 @@
       .topnav {
         font-family: Arial, Helvetica, sans-serif;
         background-color: #333;
+        border: none;
         overflow: hidden;
       }
-      .topnav a {
+      .topnav button {
         font-family: Arial, Helvetica, sans-serif;
         float: left;
+        background-color: #333;
+        border: none;
         color: #f2f2f2;
         text-align: center;
         padding: 14px 16px;
         text-decoration: none;
         font-size: 17px;
       }
-      .topnav a:hover {
+      .topnav button:hover {
         font-family: Arial, Helvetica, sans-serif;
         background-color: #ddd;
+        border: none;
         color: black;
       }
-      .topnav a.active {
+      .topnav button.active {
         font-family: Arial, Helvetica, sans-serif;
         background-color: #04AA6D;
+        border: none;
         color: white;
+        float: left;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
       }
     </style>
   </head>
   <body>
-    <div class="topnav">
-      <a id="home" class="active">Home</a>
-      <a id="ngon" class="inactive">n-gon</a>
-      <a id="slope" class="inactive">Slope</a>
-      <a id="pacman" class="inactive">Pacman</a>
-      <a id="dino" class="inactive">Chrome Dino</a>
-    </div>
     <script>
-      var homeBtn = document.getElementById("home");
-      var ngonBtn = document.getElementById("ngon");
-      var slopeBtn = document.getElementById("slope");
-      var pacmanBtn = document.getElementById("pacman");
-      var dinoBtn = document.getElementById("dino");
-      const urls = {"/ngon/index.html", "/Slope-Game-main/index.html", "/pacman/index.html", "/dino/index.html",};
-      
-      homeBtn.oncick = function() {
-        homeBtn.class = "active";
-        ngonBtn.class = "inactive";
-        slopeBtn.class = "inactive";
-        pacmanBtn.class = "inactive";
-        dinoBtn.class = "inactive";
-      };
-      ngonBtn.oncick = function() {
-        homeBtn.class = "inactive";
-        ngonBtn.class = "active";
-        slopeBtn.class = "inactive";
-        pacmanBtn.class = "inactive";
-        dinoBtn.class = "inactive";
-      };
-      slopeBtn.oncick = function() {
-        homeBtn.class = "inactive";
-        ngonBtn.class = "inactive";
-        slopeBtn.class = "active";
-        pacmanBtn.class = "inactive";
-        dinoBtn.class = "inactive";
-      };
-      pacmanBtn.oncick = function() {
-        homeBtn.class = "inactive";
-        ngonBtn.class = "inactive";
-        slopeBtn.class = "inactive";
-        pacmanBtn.class = "active";
-        dinoBtn.class = "inactive";
-      };
-      dinoBtn.oncick = function() {
-        homeBtn.class = "inactive";
-        ngonBtn.class = "inactive";
-        slopeBtn.class = "inactive";
-        pacmanBtn.class = "inactive";
-        dinoBtn.class = "active";
-      };
+      function enable(elem) {
+        document.getElementById(elem).className = "active";
+      }
+      function disable(elem) {
+        document.getElementById(elem).className = "inactive";
+      }
     </script>
+    <div class="topnav">
+      <button id="home" class="active" onclick="enable('home'); disable('ngon'); disable('slope'); disable('pacman'); disable('dino');">Home</button>
+      <button id="ngon" class="inactive" onclick="disable('home'); enable('ngon'); disable('slope'); disable('pacman'); disable('dino');">n-gon</button>
+      <button id="slope" class="inactive" onclick="disable('home'); disable('ngon'); enable('slope'); disable('pacman'); disable('dino');">Slope</button>
+      <button id="pacman" class="inactive" onclick="disable('home'); disable('ngon'); disable('slope'); enable('pacman'); disable('dino');">Pacman</button>
+      <button id="dino" class="inactive" onclick="disable('home'); disable('ngon'); disable('slope'); disable('pacman'); enable('dino');">Chrome Dino</button>
+    </div>
   </body>
 </html>
