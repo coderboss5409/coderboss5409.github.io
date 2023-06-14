@@ -31,11 +31,55 @@
   </head>
   <body>
     <div class="topnav">
-      <a class="active">Home</a>
-      <a href="/ngon/index.html">n-gon</a>
-      <a href="/Slope-Game-main/index.html">Slope</a>
-      <a href="/pacman/index.html">Pacman</a>
-      <a href="/dino/index.html">Chrome Dino</a>
+      <a id="home" class="active">Home</a>
+      <a id="ngon" class="inactive">n-gon</a>
+      <a id="slope" class="inactive">Slope</a>
+      <a id="pacman" class="inactive">Pacman</a>
+      <a id="dino" class="inactive">Chrome Dino</a>
     </div>
+    <script>
+      var homeBtn = document.getElementById("home");
+      var ngonBtn = document.getElementById("ngon");
+      var slopeBtn = document.getElementById("slope");
+      var pacmanBtn = document.getElementById("pacman");
+      var dinoBtn = document.getElementById("dino");
+      const urls = {"/ngon/index.html", "/Slope-Game-main/index.html", "/pacman/index.html", "/dino/index.html",};
+      
+      homeBtn.oncick = function() {
+        homeBtn.class = "active";
+        ngonBtn.class = "inactive";
+        slopeBtn.class = "inactive";
+        pacmanBtn.class = "inactive";
+        dinoBtn.class = "inactive";
+      };
+      ngonBtn.oncick = function() {
+        homeBtn.class = "inactive";
+        ngonBtn.class = "active";
+        slopeBtn.class = "inactive";
+        pacmanBtn.class = "inactive";
+        dinoBtn.class = "inactive";
+      };
+      slopeBtn.oncick = function() {
+        homeBtn.class = "inactive";
+        ngonBtn.class = "inactive";
+        slopeBtn.class = "active";
+        pacmanBtn.class = "inactive";
+        dinoBtn.class = "inactive";
+      };
+      pacmanBtn.oncick = function() {
+        homeBtn.class = "inactive";
+        ngonBtn.class = "inactive";
+        slopeBtn.class = "inactive";
+        pacmanBtn.class = "active";
+        dinoBtn.class = "inactive";
+      };
+      dinoBtn.oncick = function() {
+        homeBtn.class = "inactive";
+        ngonBtn.class = "inactive";
+        slopeBtn.class = "inactive";
+        pacmanBtn.class = "inactive";
+        dinoBtn.class = "active";
+      };
+    </script>
   </body>
 </html>
