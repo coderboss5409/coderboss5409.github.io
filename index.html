@@ -100,13 +100,18 @@
     <script>
       var embed = document.getElementById("embed");
       
-      function upEm() {
-        if (document.getElementById("ngon").className === "active" && embed.src !== "/ngon/index.html") {
-          embed.src = "/ngon/index.html";
-        }
+      document.getElementById("ngon").onclick = function() {
+        embed.src = "coderboss5409.github.io/ngon/index.html?version=f36af92"
       }
-      
-      setInterval("upEm()", 1);
+      document.getElementById("slope").onclick = function() {
+        embed.src = "coderboss5409.github.io/Slope-Game-main/index.html?version=f36af92"
+      }
+      document.getElementById("pacman").onclick = function() {
+        embed.src = "coderboss5409.github.io/pacman/index.html?version=f36af92"
+      }
+      document.getElementById("dino").onclick = function() {
+        embed.src = "coderboss5409.github.io/dino/index.html?version=f36af92"
+      }
     </script>
   </body>
 </html>
