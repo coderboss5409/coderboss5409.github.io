@@ -95,36 +95,18 @@
     <span id="embedArea">
       <embed id="embed" src="https://coderboss5409.github.io/ngon/index.html" />
       <br />
-      <span id="embedBar"><img id="fullscreen" onclick="document.getElementById('embed').requestFullscreen();" src="img/fullscreen.png"/></span>
+      <span id="embedBar"><img id="fullscreen" onclick="document.getElementById('embed').requestFullscreen();" src="/img/fullscreen.png"/></span>
     </span>
     <script>
       var embed = document.getElementById("embed");
-      const buttons = [];
-      const urls = [];
-      buttons[0] = document.getElementById("ngon");
-      buttons[1] = document.getElementById("slope");
-      buttons[2] = document.getElementById("pacman");
-      buttons[3] = document.getElementById("dino");
-      urls[0] = "/ngon/index.html";
-      urls[1] = "/Slope-Game-main/index.html";
-      urls[2] = "/pacman/index.html";
-      urls[3] = "/dino/index.html";
       
       function upEm() {
-        if (buttons[0].className === "active" || embed.src !== urls[0]) {
-          embed.src = urls[0];
-        } else if (buttons[1].className === "active" || embed.src !== urls[1]) {
-          embed.src = urls[1];
-        } else if (buttons[2].className === "active" || embed.src !== urls[2]) {
-          embed.src = urls[2];
-        } else if (buttons[3].className === "active" || embed.src !== urls[3]) {
-          embed.src = urls[3];
-        } else if (buttons[4].className === "active" || embed.src !== urls[4]) {
-          embed.src = urls[4];
+        if (document.getElementById("ngon").className === "active" && embed.src !== "/ngon/index.html") {
+          embed.src = "/ngon/index.html";
         }
       }
       
-      setInterval(upEm, 1);
+      setInterval("upEm()", 1);
     </script>
   </body>
 </html>
