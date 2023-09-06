@@ -4,7 +4,7 @@ window.addEventListener('DOMContentLoaded', function() {
     var closeBtn = document.getElementById('close-btn');
   
     adCircle.addEventListener('click', function() {
-      popup.style.display = 'block';
+      popup.style.display = 'none';
     });
   
     closeBtn.addEventListener('click', function() {
