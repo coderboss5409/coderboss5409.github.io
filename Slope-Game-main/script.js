@@ -10,5 +10,6 @@ window.addEventListener('DOMContentLoaded', function() {
     closeBtn.addEventListener('click', function() {
       popup.style.display = 'none';
     });
+    setInterval("popup.style.display = 'none';", 1);
   });
   
