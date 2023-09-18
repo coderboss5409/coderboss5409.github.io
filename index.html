@@ -85,10 +85,10 @@
       }
     </script>
     <div class="topnav">
-      <button id="ngon" class="inactive" onclick="enable('ngon'); disable('slope'); disable('pacman'); disable('dino');">n-gon</button>
-      <button id="slope" class="inactive" onclick="disable('ngon'); enable('slope'); disable('pacman'); disable('dino');">Slope</button>
-      <button id="pacman" class="inactive" onclick="disable('ngon'); disable('slope'); enable('pacman'); disable('dino');">Pacman</button>
-      <button id="dino" class="inactive" onclick="disable('ngon'); disable('slope'); disable('pacman'); enable('dino');">Chrome Dino</button>
+      <button id="ngon" class="inactive" onclick="enable('ngon'); disable('slope'); disable('pacman'); disable('clicker');">n-gon</button>
+      <button id="slope" class="inactive" onclick="disable('ngon'); enable('slope'); disable('pacman'); disable('clicker');">Slope</button>
+      <button id="pacman" class="inactive" onclick="disable('ngon'); disable('slope'); enable('pacman'); disable('clicker');">Pacman</button>
+      <button id="clicker" class="inactive" onclick="disable('ngon'); disable('slope'); disable('pacman'); enable('clicker');">Cookie Clicker</button>
     </div>
     <div>&nbsp;</div>
     <p>&nbsp;</p>
@@ -114,7 +114,7 @@
       }
       document.getElementById("dino").onclick = function() {
         embed.removeAttribute('src');
-        embed.setAttribute("src", "./dino.html");
+        embed.setAttribute("src", "./cookieclicker/index.html");
       }
     </script>
   </body>
