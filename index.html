@@ -85,10 +85,10 @@
       }
     </script>
     <div class="topnav">
-      <button id="ngon" class="inactive" onclick="enable('ngon'); disable('slope'); disable('pacman'); disable('clicker');">n-gon</button>
-      <button id="slope" class="inactive" onclick="disable('ngon'); enable('slope'); disable('pacman'); disable('clicker');">Slope</button>
-      <button id="pacman" class="inactive" onclick="disable('ngon'); disable('slope'); enable('pacman'); disable('clicker');">Pacman</button>
-      <button id="clicker" class="inactive" onclick="disable('ngon'); disable('slope'); disable('pacman'); enable('clicker');">Cookie Clicker</button>
+      <button id="ngon" class="inactive" onclick="enable('ngon'); disable('slope'); disable('pacman'); disable('ducklife');">n-gon</button>
+      <button id="slope" class="inactive" onclick="disable('ngon'); enable('slope'); disable('pacman'); disable('ducklife');">Slope</button>
+      <button id="pacman" class="inactive" onclick="disable('ngon'); disable('slope'); enable('pacman'); disable('ducklife');">Pacman</button>
+      <button id="clicker" class="inactive" onclick="disable('ngon'); disable('slope'); disable('pacman'); enable('ducklife');">Duck Life 3</button>
     </div>
     <div>&nbsp;</div>
     <p>&nbsp;</p>
@@ -101,20 +101,16 @@
       var embed = document.getElementById("embed");
       
       document.getElementById("ngon").onclick = function() {
-        embed.removeAttribute('src');
-        embed.setAttribute("src", "./ngon/index.html");
+        embed.src = "./ngon/index.html";
       }
       document.getElementById("slope").onclick = function() {
-        embed.removeAttribute('src');
-        embed.setAttribute("src", "./Slope-Game-main/index.html");
+        embed.src = "./Slope-Game-main/index.html";
       }
       document.getElementById("pacman").onclick = function() {
-        embed.removeAttribute('src');
-        embed.setAttribute("src", "./pacman/index.html");
+        embed.src = "./pacman/index.html";
       }
-      document.getElementById("clicker").onclick = function() {
-        embed.removeAttribute('src');
-        embed.setAttribute("src", "./cookieclicker/index.html");
+      document.getElementById("ducklife").onclick = function() {
+        embed.src = "./ducklife/index.html";
       }
     </script>
   </body>
